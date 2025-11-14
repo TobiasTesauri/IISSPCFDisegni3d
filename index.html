@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IISS Piera Cillario Ferrero - Progetti 3D</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{ --bg:#FFFDF9; --card:#FFFFFF; --accent:#2F5D41; --muted:#4B5563; --glass:rgba(255,255,255,0.92); --max-width:1160px; --radius:12px }
+        *{box-sizing:border-box;margin:0;padding:0}
+        html,body{height:100%}
+        body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:linear-gradient(180deg,#fff 0%,#fbfbfb 100%);color:#0b1720}
+        .container{max-width:var(--max-width);margin:28px auto;padding:22px}
+
+        header{display:flex;align-items:center;gap:18px;background:var(--glass);padding:16px;border-radius:14px;box-shadow:0 8px 24px rgba(3,10,10,0.06)}
+        #schoolLogo{height:72px;width:auto;border-radius:8px;object-fit:contain}
+        .site-title{flex:1}
+        .site-title h1{font-family:'Playfair Display',serif;color:var(--accent);font-size:1.6rem;margin-bottom:4px}
+        .site-title p{color:var(--muted);font-size:0.95rem}
+
+        .nav-buttons{display:flex;gap:10px}
+        .btn{padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+        .btn-primary{background:var(--accent);color:#fff}
+        .btn-ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+
+        .section{display:none;margin-top:18px;background:var(--card);padding:22px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.04)}
+        .section.active{display:block}
+
+        .hero{padding:28px;border-radius:10px;background:linear-gradient(90deg,#f8fff8,#ffffff);margin-bottom:14px}
+        .hero h2{font-family:'Playfair Display',serif;color:var(--accent);font-size:1.9rem;margin-bottom:8px}
+        .hero p{color:var(--muted);font-size:1.02rem}
+
+    .class-header{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+    .class-header h3{margin:0;color:var(--accent)}
+    /* header transition: slide + fade */
+    .class-header.transitioning{animation:headerSlide .42s ease both}
+    @keyframes headerSlide{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .gallery{display:flex;flex-wrap:wrap;gap:12px}
+    /* hero media: center and size video */
+    .hero-media{display:flex;flex-direction:column;align-items:center;margin-top:14px}
+    .hero-media video{width:100%;max-width:640px;height:auto;display:block;margin:0 auto;border-radius:10px;border:1px solid #eee}
+    .hero-media .caption{margin-top:8px;color:var(--muted);font-size:0.95rem;text-align:center}
+        .gallery img{width:calc(20% - 10px);border-radius:10px;object-fit:cover;border:1px solid #eee}
+        @media (max-width:900px){.gallery img{width:calc(50% - 10px)}}
+
+        footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.95rem}
+        .placeholder{background:#f3f3f3;border:1px dashed #ddd;color:#777;padding:18px;border-radius:8px}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img id="schoolLogo" src="logo.png" alt="Logo IISS Piera Cillario Ferrero" onerror="this.style.display='none'">
+            <div class="site-title">
+                <h1>Progetti 3D — IISS Piera Cillario Ferrero</h1>
+                <p class="subtitle">Cortemilia · Industria e Artigianato • Sezione progetti studenti</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn btn-primary" onclick="showSection('home')">Home</button>
+                <button class="btn btn-ghost" onclick="showSection('class-3e')">Classe 3e</button>
+                <button class="btn btn-ghost" onclick="showSection('class-4e')">Classe 4e</button>
+                <button class="btn btn-ghost" onclick="showSection('class-5e')">Classe 5e</button>
+            </div>
+        </header>
+
+        <div id="home" class="section active">
+            <div class="hero">
+                <h2>Benvenuti alla vetrina dei progetti 3D</h2>
+                <p>Nel laboratorio dell'IISS Piera Cillario Ferrero trasformiamo idee in oggetti concreti: disegniamo i modelli con Autodesk Inventor, messo a disposizione dalla scuola, li perfezioniamo insieme e poi li portiamo alla realtà stampando i file 3D con le nostre stampanti di laboratorio. Ogni progetto è frutto di creatività, passione e lavoro di squadra — prototipi, modelli e concept che raccontano il percorso didattico degli studenti. Seleziona una classe per scoprire i loro lavori e osservare i risultati.</p>
+
+                <div class="hero-media">
+                    <!-- Aggiungi il file video nella stessa cartella con nome: veronica_intro.mp4 -->
+                    <video id="introVideo" src="veronica_intro.mp4" muted autoplay loop playsinline>
+                        Il tuo browser non supporta il tag video.
+                    </video>
+                    <div class="caption"><em>Disegnato da Veronica Pavarino ed Ilaria Scaccianoce.</em></div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div id="class-3e" class="section">
+            <button class="btn btn-ghost" onclick="showSection('home')">← Torna alla Home</button>
+            <div class="class-header"><h3>Classe 3e — Progetti 3D</h3><p style="color:var(--muted);margin-left:auto">Anno scolastico 2025–2026</p></div>
+            <div id="gallery-3e" class="gallery"></div>
+        </div>
+
+        <div id="class-4e" class="section">
+            <button class="btn btn-ghost" onclick="showSection('home')">← Torna alla Home</button>
+            <div class="class-header"><h3>Classe 4e — Progetti 3D</h3><p style="color:var(--muted);margin-left:auto">Anno scolastico 2025–2026</p></div>
+            <div id="gallery-4e" class="gallery"></div>
+        </div>
+
+        <div id="class-5e" class="section">
+            <button class="btn btn-ghost" onclick="showSection('home')">← Torna alla Home</button>
+            <div class="class-header"><h3>Classe 5e — Progetti 3D</h3><p style="color:var(--muted);margin-left:auto">Anno scolastico 2025–2026</p></div>
+            <div id="gallery-5e" class="gallery"></div>
+        </div>
+
+        <footer>
+            IISS Piera Cillario Ferrero — Cortemilia · Sezione progetti 3D
+        </footer>
+    </div>
+
+    <script>
+        // show/hide sections with header transition when switching class pages
+        function showSection(id){
+            const prev = document.querySelector('.section.active');
+            if(prev && prev.id !== id) prev.classList.remove('active');
+            const t=document.getElementById(id);
+            if(t) {
+                t.classList.add('active');
+                // animate class header when present
+                const hdr = t.querySelector('.class-header');
+                if(hdr){
+                    hdr.classList.remove('transitioning');
+                    // force reflow to restart animation
+                    void hdr.offsetWidth;
+                    hdr.classList.add('transitioning');
+                    hdr.addEventListener('animationend', function once(){ hdr.classList.remove('transitioning'); hdr.removeEventListener('animationend', once); });
+                }
+            }
+            // scroll to top of section for better UX
+            setTimeout(()=>{ t && t.scrollIntoView({behavior:'smooth'}); }, 60);
+        }
+
+        // Genera gallerie per le classi 3e,4e,5e con immagini d1<classe>.png ... d5<classe>.png
+        function generateGalleries(){
+            const classes=['3e','4e','5e'];
+            classes.forEach(cls=>{
+                const container=document.getElementById('gallery-'+cls);
+                if(!container) return;
+                let foundAny=false;
+                for(let i=1;i<=5;i++){
+                    const fileName=`d${i}${cls}.png`;
+                    const img=document.createElement('img');
+                    img.src=fileName;
+                    img.alt=`Progetto ${i} classe ${cls}`;
+                    // se l'immagine non esiste, nascondila e mostra un piccolo placeholder
+                    img.onerror=function(){ this.remove(); };
+                    img.onload=function(){ foundAny=true; };
+                    container.appendChild(img);
+                }
+                // if no image loaded we add a placeholder message (will be removed if an image loads)
+                const placeholder=document.createElement('div');
+                placeholder.className='placeholder';
+                placeholder.textContent='Nessuna immagine trovata per questa classe. Aggiungi file con nome d1'+cls+' ... d5'+cls+' nella cartella del sito.';
+                container.appendChild(placeholder);
+                // small check after a moment: if any image loaded, remove placeholder
+                setTimeout(()=>{
+                    if(container.querySelector('img')) placeholder.remove();
+                }, 600);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', ()=>{ generateGalleries(); });
+    </script>
+</body>
+</html>
