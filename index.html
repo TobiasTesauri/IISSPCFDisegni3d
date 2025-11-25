@@ -89,13 +89,22 @@
         <div id="home" class="section active">
             <div class="hero">
                 <h2>Benvenuti alla vetrina dei progetti 3D</h2>
-                <p>Nel laboratorio dell'IISS Piera Cillario Ferrero trasformiamo idee in oggetti concreti: disegniamo i modelli con Autodesk Inventor, li perfezioniamo e li realizziamo con le tecnologie del laboratorio.</p>
+                <p>Nel laboratorio dell'IISS Piera Cillario Ferrero trasformiamo idee in oggetti concreti: disegniamo i modelli con Autodesk Inventor, li perfezioniamo e li realizziamo con le tecnolog[...]
+                </p>
 
                 <div class="hero-media">
                     <video id="introVideo" src="veronica_intro.mp4" poster="veronica_intro.jpg" muted autoplay loop playsinline>
                         Il tuo browser non supporta il tag video.
                     </video>
                     <div class="caption"><em>Disegnato da Veronica Pavarino ed Ilaria Scaccianoce.</em></div>
+
+                    <!-- Immagine bancone di Santa Caterina (prova .png prima, poi .jpg). Se assente viene nascosta. -->
+                    <div style="margin-top:12px;text-align:center">
+                        <img id="bancone" src="bancone.png" alt="Bancone di Santa Caterina"
+                             onerror="if(this.src.indexOf('.png')>-1){this.src='bancone.jpg';}else{this.style.display='none';}"
+                             style="max-width:640px;width:100%;height:auto;border-radius:10px;border:1px solid #eee" loading="lazy">
+                        <div class="caption" style="margin-top:6px;color:var(--muted);font-size:0.95rem">Foto: Bancone di Santa Caterina</div>
+                    </div>
                 </div>
             </div>
         </div>
